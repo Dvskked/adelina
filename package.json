@@ -1,0 +1,31 @@
+{
+  "name": "adelina",
+  "version": "1.0.0",
+  "description": "Adelina: asistente/compañera virtual con memoria profunda, voz natural e inteligencia emocional.",
+  "private": true,
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "start:web": "cross-env ADELINA_MODE=web tsx src/index.ts",
+    "start:cli": "cross-env ADELINA_MODE=cli tsx src/index.ts",
+    "smoke": "cross-env ADELINA_MODE=smoke tsx src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "preview": "node dist/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.5",
+    "cross-env": "^7.0.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
