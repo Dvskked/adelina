@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adelina</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="avatar" aria-hidden="true">
+        <span class="avatar-inner"></span>
+      </div>
+      <div class="topbar-info">
+        <h1>Adelina</h1>
+        <p id="status" class="status">conectando…</p>
+      </div>
+      <div class="topbar-actions">
+        <label class="tts-picker">
+          Voz
+          <select id="ttsEngine">
+            <option value="auto">Auto</option>
+            <option value="elevenlabs">ElevenLabs</option>
+            <option value="browser">Navegador</option>
+          </select>
+        </label>
+        <button id="resetBtn" class="btn-ghost" title="Olvidar esta conversación">Olvidar</button>
+      </div>
+    </header>
+
+    <main id="chat" class="chat" aria-live="polite">
+      <div class="bubble adelina first">
+        <p>Hola. Soy Adelina. ¿Cómo estás hoy?</p>
+      </div>
+    </main>
+
+    <footer class="composer">
+      <button id="micBtn" class="mic" title="Pulsar para hablar con Adelina">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path fill="currentColor" d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Z"/>
+          <path fill="currentColor" d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V20h2v-2.08A7 7 0 0 0 19 11h-2Z"/>
+        </svg>
+      </button>
+
+      <form id="chatForm" class="chat-form">
+        <input
+          id="textInput"
+          class="text-input"
+          type="text"
+          placeholder="Escríbele a Adelina…"
+          autocomplete="off"
+          autofocus
+        />
+        <button id="sendBtn" class="send" title="Enviar">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M3.4 20.4 22 12 3.4 3.6l-.01 6.62L16 12 3.39 13.77 3.4 20.4Z"/>
+          </svg>
+        </button>
+      </form>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
