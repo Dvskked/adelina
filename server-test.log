@@ -1,0 +1,12 @@
+
+> adelina@1.0.0 start:web
+> cross-env ADELINA_MODE=web tsx src/index.ts
+
+============================================================
+  ADELINA está despierta
+  Interfaz local:  http://localhost:3457
+  Proveedor LLM:   gemini (gemini)
+  STT:             Whisper (OpenAI)
+  TTS:             Voz nativa del navegador
+  Presiona Ctrl+C para detener el servidor.
+============================================================
